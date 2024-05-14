@@ -1,0 +1,14 @@
+The project aims to create an information gathering tool for Windows using Java programming language. Information gathering is the first phase of penetration testing, and this tool is designed to collect information about the target system in an undetectable and lightweight manner.
+The tool has the following features:
+
+Gather system information (e.g., systeminfo)
+Gather network information (e.g., ipconfig)
+Perform a simple DoS (Denial of Service) attack
+Redirect to malicious websites
+Access the camera
+
+
+The tool works by creating and executing batch scripts (.bat files) using Java code. These batch scripts then fetch the requested information from the system.
+The tool is designed to be lightweight, not requiring installation on the target system, and can run as long as Java is installed on the target machine.
+The report includes sections on the existing system, proposed system architecture, system specifications, techniques used (Java programming language, Lanch4j for creating Windows executables, and user interface design), implementation details, results and discussion, conclusion, and future scope.
+The future scope mentions integrating machine learning for advanced data analysis, real-time data processing, improving user interfaces, expanding data visualization capabilities, and exploring mobile applications, cloud integration, and IoT data gathering.
